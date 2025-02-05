@@ -144,7 +144,6 @@
             app:title="@string/settings_advanced_prevent_sleep"
             app:summary="@string/settings_advanced_prevent_sleep_desc"
             app:useSimpleSummaryProvider="true"
-            app:icon="@drawable/bedtime"
             app:singleLineTitle="false"
             app:defaultValue="true" />
 
