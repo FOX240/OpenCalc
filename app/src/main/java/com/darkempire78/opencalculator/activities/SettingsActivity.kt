@@ -52,25 +52,6 @@ class SettingsActivity : AppCompatActivity() {
     class SettingsFragment : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
-
-            val appLanguagePreference = findPreference<Preference>("darkempire78.opencalculator.APP_LANGUAGE")
-
-            // remove the app language button if you are using an Android version lower than v33 (Android 13)
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
-                appLanguagePreference?.isVisible = false
-            } else {
-                // Display the current selected language
-                appLanguagePreference?.summary = Locale.getDefault().displayLanguage
-            }
-
-            // Select app language button
-            appLanguagePreference?.setOnPreferenceClickListener {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                    launchChangeAppLanguageIntent()
-                }
-                true
-            }
-
             // Theme button
             val appThemePreference = findPreference<Preference>("darkempire78.opencalculator.APP_THEME_SELECTOR")
 
