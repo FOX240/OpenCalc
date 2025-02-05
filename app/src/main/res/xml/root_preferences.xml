@@ -8,15 +8,6 @@
         <!--app:iconSpaceReserved="false"-->
 
         <Preference
-            android:id="@+id/settings_select_app_language"
-            app:key="darkempire78.opencalculator.APP_LANGUAGE"
-            app:selectable="true"
-            app:enabled="true"
-            app:title="@string/settings_general_language"
-            app:summary="APP LANGUAGE"
-            app:icon="@drawable/language" />
-
-        <Preference
             android:id="@+id/settings_select_app_theme"
             app:key="darkempire78.opencalculator.APP_THEME_SELECTOR"
             app:selectable="true"
